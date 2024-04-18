@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <title>My weather app</title>
   </head>
   <body>
     <div class="core-app">
       <div>
         <header>
-          <form>
+          <form id="search-form" class="search-form">
             <input
               type="search"
               placeholder="Enter a city ..."
               required
               class="input-form"
+              id="input-form"
             />
             <input type="submit" value="Search" class="input-form-button" />
           </form>
         </header>
         <main>
           <div class="current-temperature-details">
-            <h1>Johannesburg</h1>
-            <div>Sunday 00:00, cloudy</div>
+            <h1 id="city"></h1>
+            <p class="app-details">
+              <span id="date-and-time"></span>
+              <br />
+              <span id="weather-description"></span>
+            </p>
             <div class="current-temp">
-              🌤️ 14<span class="degree-sign">°C</span>
+              <span id="weather-icon" class="weather-icon"></span>
+              <span class="temp"></span><span class="degree-sign">°C</span>
             </div>
             <div class="other-weather-details">
               <div>High: <strong>24°C </strong>| Low: 4°C</div>
-              <div>Wind: 2.06km/hr</div>
-              <div>Feels like: 14°C</div>
-              <div>Humidity: 92%</div>
+              <div>Wind: <span id="wind-description"></span>km/hr</div>
+              <div>Feels like: <span id="feels-like"></span>°C</div>
+              <div>Humidity: <span id="humidity-description"></span>%</div>
             </div>
           </div>
         </main>
@@ -46,5 +53,6 @@
         </footer>
       </div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
