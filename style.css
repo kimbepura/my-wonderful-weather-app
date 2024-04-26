@@ -36,10 +36,12 @@ img {
   position: relative;
   top: 5px;
 }
-
 .current-temperature-details {
-  text-align: center;
+  display: flex;
+  padding-bottom: 20px;
+  justify-content: space-between;
 }
+
 .current-temp {
   font-size: 40px;
   font-weight: bold;
@@ -53,6 +55,31 @@ img {
 }
 .other-weather-details {
   color: rgba(0, 0, 0, 0.6);
+}
+.weather-forecast {
+  position: relative;
+  right: 30px;
+  top: 10px;
+}
+.forecast-icon {
+  height: 35px;
+  width: 35px;
+  position: relative;
+  top: 10px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  top: 30px;
+  right: 60px;
+}
+li {
+  padding: 10px;
 }
 footer {
   text-align: center;
